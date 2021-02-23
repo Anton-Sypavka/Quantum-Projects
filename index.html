@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <div class="page-container">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="#">Logo</a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="#">How it works</a></li>
+                <li class="nav__list-item"><a href="#">About</a></li>
+                <li class="nav__list-item"><a href="#">Instructions</a></li>
+                <li class="nav__list-item"><a href="#">Accounts</a></li>
+                <li class="nav__list-item"><a href="#">Platforms</a></li>
+                <li class="nav__list-item"><a href="#">Contact</a></li>
+                <li class="nav__list-item sign-in"><a href="#">Sign in for free</a></li>
+            </ul>
+            <div class="nav__buttons">
+                <div class="nav__select-button">
+                    <select class="nav__switch-language" name="language" id="language-select">
+                        <option value="">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="ua">UA</option>
+                        <option value="fr">FR</option>
+                    </select>
+                </div>
+                <button class="button nav__sign-in-button">Sign in for free</button>
+                <button class="nav__bars-button"><i id="nav__bars-icon" class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="header__text-container">
+                <h2 class="heading header__heading">Trade everywhere. Invest here!</h2>
+                <p class="header__description">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. </p>
+                <button class="button header__start-trading-button">Start trading</button>
+            </div>
+            <div >
+                <img class="header__image" src="./images/header-image.png" alt="">
+            </div>
+        </header>
+        <main class="main-section">
+            <section class="getting-started">
+                <h2 class="heading getting-started__heading">Getting Started Is Fast & Easy</h2>
+                <div class="getting-started__steps">
+                    <div class="getting-started__step register">
+                        <p class="step-order">01.</p>
+                        <h3 class="step-heading">Register</h3>
+                        <p class="step-description">Complete the simple registration to get your trading credentials.</p>
+                    </div>
+                    <div class="getting-started__step verification">
+                        <p class="step-order">02.</p>
+                        <h3 class="step-heading">Verification</h3>
+                        <p class="step-description">Big Invest is required to verify your identity, upload your documents quickly and get approved in minutes.</p>
+                    </div>
+                    <div class="getting-started__step deposit-funds">
+                        <p class="step-order">03.</p>
+                        <h3 class="step-heading">Deposit funds</h3>
+                        <p class="step-description">Big Invest accepts credit cards and bank wires. Just use the secure deposit form and follow the steps.</p>
+                    </div>
+                    <div class="getting-started__step start-trading">
+                        <p class="step-order">04.</p>
+                        <h3 class="step-heading">Start Trading</h3>
+                        <p class="step-description">Once your deposit has been credited, you can begin trading instantly. In no time you will see profits rolling into your account.</p>
+                    </div>
+                </div>
+            </section>
 
+        </main>
+    </div>
 </body>
 </html>
