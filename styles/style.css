@@ -221,7 +221,95 @@
     color: #4f4f4f;
 }
 
-/*Media requsts*/
+.slider-wrapper {
+    padding: 80px 0;
+    position: relative;
+}
+
+.slide-content {
+    font-family: "Museo Sans Cyrl";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.active-slide {
+    display: flex;
+}
+
+.slider-image-wrapper {
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.slide-image {
+    height: 73px;
+    width: 73px;
+}
+
+.slide-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.slide-subtitle {
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #333333;
+}
+
+.slide-subtitle::after {
+    content: ' ';
+    display: block;
+    background-image: url("../images/slider/braces.png");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 30px;
+    margin: 24px auto;
+}
+
+.slide-description {
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    height: 232px;
+    width: 280px;
+    overflow: hidden;
+}
+
+.slide-number {
+    font-size: 15px;
+    color: #4F62F6;
+    padding-top: 31px;
+}
+
+.slider-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 64px;
+}
+
+.slider-button {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+/*Media requests*/
 
 /*Tablet*/
 @media screen and (min-width: 768px) {
@@ -340,6 +428,24 @@
         grid-area: 4 / 2 / 6 / 3;
     }
 
+    .people-love__heading {
+        width: 400px;
+    }
+
+    .slider-wrapper {
+        width: 688px;
+        padding: 48px 0;
+    }
+
+    .slide-description {
+        width: 508px;
+        height: 116px;
+    }
+
+    .slider-buttons-wrapper {
+        bottom: 150px;
+    }
+
 
 }
 
@@ -389,4 +495,96 @@
         height: 519px;
         padding: 0;
     }
+
+    .main-section {
+        padding: 140px 40px;
+    }
+
+    .getting-started__steps {
+        position: relative;
+        display: grid;
+        grid-template-rows: 12px 56px 42px 56px 42px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 132px;
+        grid-row-gap: 135px;
+    }
+
+    .getting-started__step {
+        width: 483px;
+    }
+
+    .register::after {
+        width: 370px;
+        height: 43px;
+        left: 482px;
+        top: 142px;
+    }
+
+    .verification::after {
+        width: 370px;
+        height: 75px;
+        left: 245px;
+        top: 302px;
+    }
+
+    .deposit-funds::after {
+        width: 370px;
+        height: 66px;
+        left: 482px;
+        top: 489px;
+    }
+
+    .people-love {
+        display: flex;
+        justify-content: space-between;
+        width: 1098px;
+        padding: 140px 0;
+    }
+
+    .people-love__heading {
+        font-size: 56px;
+        line-height: 66px;
+    }
+
+    .slider-wrapper {
+        padding: 0;
+        width: 585px;
+    }
+
+    .slide-content {
+        align-items: start;
+    }
+
+    .slide-title {
+        position: absolute;
+        left: 115px;
+    }
+
+    .slide-subtitle {
+        position: absolute;
+        left: 115px;
+        top: 38px;
+    }
+
+    .slide-subtitle::after {
+        position: absolute;
+        right: 275px;
+        top: 30px;
+    }
+
+    .slide-description {
+        text-align: start;
+        width: 585px;
+        height: 116px;
+        padding-top: 17px;
+    }
+
+    .slider-buttons-wrapper {
+        bottom: 65px;
+        right: 983px;
+        width: 112px;
+    }
+
+
+
 }
