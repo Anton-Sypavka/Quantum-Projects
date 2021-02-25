@@ -86,6 +86,10 @@
     background-color: #354BF4;
 }
 
+.button:disabled {
+    background-color: #828282;
+}
+
 .nav__buttons {
     display: flex;
     align-items: center;
@@ -176,7 +180,7 @@
 .main-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     padding: 80px 20px;
 }
 
@@ -190,6 +194,8 @@
     grid-template-rows: repeat(4, 0fr);
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 24px;
+    width: 280px;
+    margin: 0 auto;
 }
 
 .getting-started__step {
@@ -221,9 +227,14 @@
     color: #4f4f4f;
 }
 
+.people-love {
+    position: relative;
+    padding: 80px 0;
+}
+
 .slider-wrapper {
     padding: 80px 0;
-    position: relative;
+    /*position: relative;*/
 }
 
 .slide-content {
@@ -291,7 +302,7 @@
     justify-content: space-between;
     width: 100%;
     position: absolute;
-    bottom: 64px;
+    bottom: 65px;
 }
 
 .slider-button {
@@ -302,10 +313,134 @@
     height: 48px;
     border: 1px solid #E0E0E0;
     border-radius: 50px;
+    cursor: pointer;
 }
 
+.slider-button:hover {
+    border: 1px solid #6248FF;
+}
 
+.slider-button:active {
+    background-color: #354BF4;
+}
 
+.frequently-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.questions-list {
+    padding: 32px 0;
+    width: 100%;
+}
+
+.questions-list__item {
+    font-family: "Museo Sans Cyrl";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #333333;
+    padding: 24px 16px;
+    border: 2px solid #4F62F6;
+    border-radius: 15px;
+    margin-bottom: 16px;
+}
+
+.questions-list__item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questions-list__item-title p {
+    width: 189px;
+}
+
+.questions-list__item-title i {
+    cursor: pointer;
+}
+
+.question-list__item-description {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #4f4f4f;
+    padding: 24px 0;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.contact-us {
+    padding: 48px 0;
+}
+
+.contact-us__text-container {
+    padding: 24px 0 48px 0;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 27px;
+    color: #4f4f4f;
+}
+
+.contact-us__description {
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 24px;
+}
+
+/*.contact-us__sub-text {*/
+/*    padding-bottom: 17px;*/
+/*}*/
+
+.contact-info {
+    padding: 16px 0;
+}
+
+.contact-info h3 {
+    font-family: Museo Sans Cyrl;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-bottom: 8px;
+}
+
+.form-container {
+    border: 2px solid #4F62F6;
+    border-radius: 20px;
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.form-input {
+    margin: 0 auto 24px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.input-message {
+    height: 89px;
+    margin-bottom: 48px;
+}
+
+.submit-button {
+    width: 172px;
+    height: 54px;
+}
+
+.form-input::-webkit-input-placeholder {
+    font-family: Montserrat;
+    padding: 10px;
+}
 
 
 
@@ -351,7 +486,7 @@
     }
 
     .main-section {
-        align-items: center;
+        /*align-items: center;*/
         padding: 120px 40px;
     }
 
@@ -368,6 +503,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 30px;
         grid-row-gap: 135px;
+        width: 688px;
     }
 
 
@@ -430,10 +566,12 @@
 
     .people-love__heading {
         width: 400px;
+        font-size: 56px;
+        line-height: 66px;
     }
 
     .slider-wrapper {
-        width: 688px;
+        /*width: 688px;*/
         padding: 48px 0;
     }
 
@@ -444,6 +582,20 @@
 
     .slider-buttons-wrapper {
         bottom: 150px;
+    }
+
+    .frequently-questions__heading {
+        font-size: 56px;
+        line-height: 66px;
+        width: 500px;
+    }
+
+    .frequently-questions {
+        align-items: start;
+    }
+
+    .questions-list {
+        padding: 56px 0;
     }
 
 
@@ -497,7 +649,8 @@
     }
 
     .main-section {
-        padding: 140px 40px;
+        padding: 140px 120px;
+        align-items: start;
     }
 
     .getting-started__steps {
@@ -507,6 +660,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 132px;
         grid-row-gap: 135px;
+        width: 1098px;
     }
 
     .getting-started__step {
@@ -537,8 +691,9 @@
     .people-love {
         display: flex;
         justify-content: space-between;
-        width: 1098px;
+        width: 100%;
         padding: 140px 0;
+        /*position: relative;*/
     }
 
     .people-love__heading {
@@ -557,13 +712,13 @@
 
     .slide-title {
         position: absolute;
-        left: 115px;
+        right: 360px;
     }
 
     .slide-subtitle {
         position: absolute;
-        left: 115px;
-        top: 38px;
+        top: 180px;
+        right: 320px;
     }
 
     .slide-subtitle::after {
@@ -580,8 +735,8 @@
     }
 
     .slider-buttons-wrapper {
-        bottom: 65px;
-        right: 983px;
+        left: 0;
+        top: 285px;
         width: 112px;
     }
 
