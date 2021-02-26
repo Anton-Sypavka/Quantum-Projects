@@ -914,6 +914,16 @@
         padding: 80px;
     }
 
+    .name-error {
+        left: 80px;
+        top: 125px;
+    }
+
+    .email-error {
+        left: 80px;
+        top: 187px;
+    }
+
     .footer {
         padding: 62px 40px;
         justify-content: center;
