@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="page-container">
         <nav class="nav">
-            <div class="nav__logo">
+            <div class="logo nav__logo">
                 <a href="#">Logo</a>
             </div>
             <ul class="nav__list">
@@ -39,7 +38,7 @@
         </nav>
         <header class="header">
             <div class="header__text-container">
-                <h2 class="heading header__heading">Trade everywhere. Invest here!</h2>
+                <h2 class="main-heading header__heading">Trade everywhere. Invest here!</h2>
                 <p class="header__description">We provide only the best trading software. The trading terminal MetaTrader4 is the most popular and convenient platform for access to global exchanges. You can work anywhere. </p>
                 <button class="button header__start-trading-button">Start trading</button>
             </div>
@@ -179,44 +178,82 @@
                     </li>
                 </ul>
             </section>
-            <section class="contact-us">
-                <h2 class="heading contact-us__heading">Contact us!</h2>
-                <div class="contact-us__text-container">
-                    <p class="contact-us__description">The support staff and customer service are available to help you with any questions or needs you might have. Just drop us a line.</p>
-                    <p class="contact-us__sub-text">This site is owned and operated by Kode Tech Solutions LTD</p>
-                    <div class="contact-info phone">
-                        <h3>Phone:</h3>
-                        <p>442038857261</p>
-                    </div>
-                    <div class="contact-info email">
-                        <h3>Email:</h3>
-                        <p>help@google.com</p>
-                    </div>
-                    <div class="contact-info address">
-                        <h3>Address:</h3>
-                        <p>Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Republic of the Marshall Islands, MH 96960</p>
-                    </div>
-                </div>
-                <div class="form-container">
-                    <form class="contact-us__form" action="#" onchange="submitButtonEnabled()">
-                        <div class="input-name-container">
-                            <input type="text" placeholder="Name" class="form-input input-name" required onchange="validateName(this.value)">
-                            <span class="name-error"></span>
-                        </div>
-                        <div class="input-email-container">
-                            <input type="text" placeholder="Email" class="form-input input-email" required onchange="validateEmail(this.value)">
-                            <span class="email-error"></span>
-                        </div>
-                        <div class="input-message-container">
-                            <textarea type="text" placeholder="Message" class="form-input input-message"></textarea>
-                        </div>
-                        <button disabled="disabled" class="button submit-button">send</button>
-                    </form>
-                </div>
-
-            </section>
-
         </main>
+        <section class="contact-us">
+            <div class="contact-us__text-container">
+                <h2 class="main-heading contact-us__heading">Contact us!</h2>
+                <p class="contact-us__description">The support staff and customer service are available to help you with any questions or needs you might have. Just drop us a line.</p>
+                <p class="contact-us__sub-text">This site is owned and operated by Kode Tech Solutions LTD</p>
+                <div class="contact-info phone">
+                    <h3>Phone:</h3>
+                    <p>442038857261</p>
+                </div>
+                <div class="contact-info email">
+                    <h3>Email:</h3>
+                    <p>help@google.com</p>
+                </div>
+                <div class="contact-info address">
+                    <h3>Address:</h3>
+                    <p>Trust Company Complex, Ajeltake Road, Ajeltake Island, Majuro, Republic of the Marshall Islands, MH 96960</p>
+                </div>
+            </div>
+            <div class="form-container">
+                <form class="contact-us__form" action="#" onchange="validateForm(this.value)">
+                    <div class="input-name-container">
+                        <input type="text" placeholder="Name" class="validating-input form-input input-name" required>
+                        <span class="error-message name-error"></span>
+                    </div>
+                    <div class="input-email-container">
+                        <input type="text" placeholder="Email" class="validating-input validated form-input input-email" required>
+                        <span class="error-message email-error"></span>
+                    </div>
+                    <div class="input-message-container">
+                        <textarea type="text" placeholder="Message" class="form-input input-message"></textarea>
+                    </div>
+                    <button disabled="disabled" class="button submit-button">send</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="logo footer-logo">
+                <a href="#">Logo</a>
+            </div>
+            <div class="footer__section-list">
+                <ul class="sections-list">
+                    <li class="list-item"><a href="#">About us</a></li>
+                    <li class="list-item"><a href="#">Instructions</a></li>
+                    <li class="list-item"><a href="#">Platforms</a></li>
+                    <li class="list-item"><a href="#">Contact Us</a></li>
+                    <li class="list-item"><a href="#">Sign in</a></li>
+                    <li class="list-item"><a href="#">Sign up for free</a></li>
+                </ul>
+            </div>
+            <div class="footer-text text-info">
+                <h3 class="footer-text-heading">Information and high risk warning:</h3>
+                <p class="footer-text-description">
+                    Trading with foreign exchange (FX), contract for differences (CFDs) and precious metals carries a high level of risk that may not be suitable for all investors. Leverage creates additional risk and loss exposure. Before you decide to trade foreign exchange or contract for differences, carefully consider your investment objectives, experience level, and risk tolerance.
+                </p>
+            </div>
+            <div class="footer-text text-legal">
+                <h3 class="footer-text-heading">Legal disclaimer:</h3>
+                <p class="footer-text-description">
+                    Forex trading entails significant risks and is not appropriate for all investors. The possibility of incurring substantial losses should be taken into account. It is therefore important to understand the possible consequences of investing. Traders should weigh their earning potential against the risks involved and act accordingly. Interactive Trade Ltd operating under brand and using domenLink domain within the European Economic Area.
+                </p>
+            </div>
+            <div class="copyright-list-container">
+                <ul class="copyright-list">
+                    <li class="copyright-list-item">Copyright 2020, All Right Reserved</li>
+                    <li class="copyright-list-item">Terms and Conditions</li>
+                    <li class="copyright-list-item">Privacy Policy</li>
+                    <li class="copyright-list-item">Risk Warnings</li>
+                    <li class="copyright-list-item">Anti-Money Laundering</li>
+                </ul>
+            </div>
+        </footer>
+
     </div>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

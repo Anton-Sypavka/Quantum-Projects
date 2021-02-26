@@ -25,7 +25,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*width: 320px;*/
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -33,7 +32,8 @@
     position: relative;
 }
 
-.nav__logo a{
+.logo a{
+    font-family: "Museo Sans Cyrl";
     text-decoration: none;
     color: black;
     font-size: 15px;
@@ -145,11 +145,29 @@
     text-align: center;
 }
 
+.main-heading {
+    font-family: "Museo Sans Cyrl";
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 44px;
+    color: #333333;
+}
+
 .heading {
     font-family: "Museo Sans Cyrl";
     font-size: 40px;
     font-weight: bold;
     line-height: 44px;
+    position: relative;
+}
+
+.heading::after {
+    content: '';
+    background-color: rgba(79, 98, 246, 0.1);
+    width: 214px;
+    height: 50px;
+    position: absolute;
+    left: 0;
 }
 
 .header__heading {
@@ -377,11 +395,11 @@
 }
 
 .contact-us {
-    padding: 48px 0;
+    padding: 48px 20px;
+    background-color: rgba(79, 98, 246, 0.1);
 }
 
 .contact-us__text-container {
-    padding: 24px 0 48px 0;
     font-family: Montserrat;
     font-size: 16px;
     line-height: 27px;
@@ -391,12 +409,8 @@
 .contact-us__description {
     font-size: 18px;
     line-height: 30px;
-    padding-bottom: 24px;
+    padding: 24px 0;
 }
-
-/*.contact-us__sub-text {*/
-/*    padding-bottom: 17px;*/
-/*}*/
 
 .contact-info {
     padding: 16px 0;
@@ -413,8 +427,10 @@
 .form-container {
     border: 2px solid #4F62F6;
     border-radius: 20px;
+    background-color: #FFFFFF;
     padding: 48px 16px;
     text-align: center;
+    position: relative;
 }
 
 .form-input {
@@ -442,6 +458,78 @@
     padding: 10px;
 }
 
+.valid {
+    border: 1px solid #0EAC00;
+}
+
+.invalid {
+    border: 1px solid #EB5757
+}
+
+.error-message {
+    position: absolute;
+    font-family: "Museo Sans Cyrl";
+    font-size: 15px;
+    color: #EB5757;
+}
+
+.name-error {
+    top: 90px;
+    left: 16px;
+}
+
+.email-error {
+    top: 154px;
+    left: 16px;
+}
+
+.footer {
+    font-family: "Museo Sans Cyrl";
+    font-size: 15px;
+    font-weight: bold;
+    padding: 46px 20px;
+    display: grid;
+    /*grid-row-gap: 32px;*/
+}
+
+.footer-logo {
+    text-align: center;
+    padding-bottom: 46px;
+}
+
+.sections-list a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.list-item {
+    padding-bottom: 32px;
+}
+
+.footer-text-heading {
+    font-size: 18px;
+    width: 210px;
+}
+
+.footer-text-description {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #4F4F4F;
+    padding: 16px 0 24px;
+}
+
+.copyright-list {
+    text-align: center;
+    color: #828282;
+    font-family: Montserrat;
+    font-weight: normal;
+}
+
+.copyright-list-item {
+    padding: 16px 0;
+}
 
 
 /*Media requests*/
@@ -458,6 +546,12 @@
 
     .nav__sign-in-button {
         display: inline-block;
+    }
+
+    .heading::after {
+        width: 365px;
+        height: 72px;
+        left: 0;
     }
 
     .header {
@@ -486,7 +580,6 @@
     }
 
     .main-section {
-        /*align-items: center;*/
         padding: 120px 40px;
     }
 
@@ -570,6 +663,15 @@
         line-height: 66px;
     }
 
+    .people-love__heading::after{
+        content: '';
+        background-color: rgba(79, 98, 246, 0.1);
+        width: 170px;
+        height: 72px;
+        position: absolute;
+        left: 0;
+    }
+
     .slider-wrapper {
         /*width: 688px;*/
         padding: 48px 0;
@@ -590,6 +692,10 @@
         width: 500px;
     }
 
+    .frequently-questions__heading::after {
+        width: 265px;
+    }
+
     .frequently-questions {
         align-items: start;
     }
@@ -598,6 +704,58 @@
         padding: 56px 0;
     }
 
+    .form-container {
+        margin-top: 32px;
+    }
+
+    .contact-us {
+        padding: 48px 130px;
+    }
+
+    .contact-us__heading {
+        text-align: center;
+        font-size: 56px;
+        line-height: 66px;
+    }
+
+    .contact-us__description {
+        padding: 32px 0 48px;
+    }
+
+    .footer {
+        padding: 62px 40px;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 0fr);
+    }
+
+    .footer-logo {
+        padding-bottom: 54px;
+    }
+
+    .sections-list {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .list-item {
+        padding-bottom: 40px;
+    }
+
+    .footer-text {
+        width: 508px;
+        margin: 0 auto;
+    }
+
+    .footer-text-heading {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-text-description {
+        padding: 16px 0 32px;
+    }
 
 }
 
@@ -740,6 +898,63 @@
         width: 112px;
     }
 
+    .contact-us {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    .contact-us__text-container {
+        width: 483px;
+    }
+
+    .form-container {
+        width: 585px;
+        box-sizing: border-box;
+        padding: 80px;
+    }
+
+    .footer {
+        padding: 62px 40px;
+        justify-content: center;
+        grid-template-columns: 0fr;
+        grid-template-rows: 1fr 55px;
+    }
+
+    .footer-logo {
+        grid-area: 1 / 1 / 2 / 2;
+        padding-right: 160px;
+    }
+
+    .text-info {
+        grid-area: 1 / 2 / 2 / 3;
+        padding-right: 30px;
+    }
+
+    .text-legal {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .footer__section-list {
+        grid-area: 1 / 4 / 2 / 5;
+        padding-left: 160px;
+    }
+
+    .copyright-list-container {
+        grid-area: 2 / 1 / 3 / 5;
+    }
+
+    .sections-list {
+        flex-direction: column;
+    }
+
+    .copyright-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-text {
+        width: 380px;
+    }
 
 }
